@@ -1,0 +1,30 @@
+/*
+Theme Name: Choyce Design 2018
+Theme URI: https://github.com/?
+Author: Kelly Dwan & Mel Choyce
+Description: 2018's iteration of melchoyce.design
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: choycedesign
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+choycedesign is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+@import 'abstract/variables';
+@import 'abstract/mixins';
+
+@import 'shared/normalize';
+@import 'shared/typography';
+
+@import 'header';
+@import 'content';
+@import 'comments';
+@import 'footer';

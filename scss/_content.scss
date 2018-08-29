@@ -1,0 +1,163 @@
+.site-main {
+	.hentry + .hentry {
+		margin: 40px 0;
+		padding: 60px 0 0;
+	}
+
+	.page-header {
+		margin-bottom: 40px;
+	}
+
+	.page-title {
+		margin-bottom: 10px;
+	}
+
+	.entry-image {
+		background: $grey-mid;
+	}
+
+	.wp-post-image {
+		display: block;
+		margin: 0 auto 40px;
+	}
+
+	.entry-header {
+		margin: 0;
+	}
+
+	.entry-title {
+		margin: 0 0 10px;
+		@include font-size( 2.2, 1.2 );
+
+		@media (max-width: $bkpt-tablet) {
+			letter-spacing: 2px;
+		}
+
+		a {
+			color: $color-text;
+
+			@include hover-state {
+				text-decoration: none;
+				color: $blue;
+			}
+		}
+	}
+
+	.entry-meta {
+		color: $color-meta;
+		@include font-size( 1.4 );
+
+		span + span {
+			margin-left: 8px;
+		}
+
+		a {
+			font-style: italic;
+		}
+
+		.byline {
+			display: none;
+
+			body.single & {
+				display: inline;
+				margin-left: 4px;
+			}
+		}
+	}
+
+	.entry-content,
+	.entry-summary {
+		margin: 30px 0 0;
+	}
+
+	.wp-block-separator {
+		clear: both;
+	}
+
+	.posts-navigation,
+	.post-navigation {
+		margin: 60px 0 0;
+		@include font-size( 1.4 );
+		.nav-links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.nav-previous,
+		.nav-next {
+			flex: 1;
+		}
+
+		.nav-next {
+			text-align: right;
+		}
+	}
+
+	@media (max-width: 600px) {
+		padding: 0;
+
+		.paging-navigation,
+		.post-navigation {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.nav-previous,
+		.nav-next {
+			float: none;
+			width: 100%;
+		}
+
+		.nav-previous + .nav-next {
+			margin-top: 20px;
+		}
+	}
+}
+
+// Layout for all pages but home
+body:not(.home) {
+	.site-content {
+		margin: 60px auto 0;
+		padding: 0 25px 50px;
+		max-width: $size-main-width;
+		overflow: hidden;
+	}
+
+	.content-area {
+		float: left;
+		margin: 0 (-$size-sidebar-width) 0 0;
+		width: 100%;
+	}
+
+	.site-main {
+		margin: 0 $size-sidebar-width + 50px 0 0;
+	}
+
+	.site-content .widget-area {
+		float: right;
+		width: $size-sidebar-width;
+	}
+
+	.footer-widget-area {
+		clear: both;
+	}
+
+	@media screen and (max-width: $bkpt-tablet) {
+		.content-area,
+		.site-main,
+		.site-content .widget-area {
+			float: none;
+			margin: 0;
+			width: 100%;
+		}
+
+		.site-content .widget-area {
+			margin-top: 50px;
+			padding-top: 50px;
+			border-top: 2px solid $grey-light;
+		}
+	}
+}
+
+@import 'content/home';

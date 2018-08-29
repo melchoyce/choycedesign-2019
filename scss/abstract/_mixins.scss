@@ -1,0 +1,115 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1.6, $lineHeight: false ) {
+	font-size: ($sizeValue * 10) + px;
+	font-size: $sizeValue + rem;
+	@if ($lineHeight) {
+		line-height: $lineHeight;
+	}
+}
+
+@mixin hover-state {
+	&:hover,
+	&:active,
+	&:focus {
+		@content;
+	}
+}
+
+@mixin clearfix() {
+	content: '';
+	display: table;
+	table-layout: fixed;
+}
+
+@mixin clearfix-after() {
+	clear: both;
+}
+
+@mixin light-on-dark() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin uppercase( $sizeValue: false, $letterSpace: 4 ) {
+	@if ($sizeValue) {
+		@include font-size( $sizeValue );
+	}
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: $letterSpace * 1px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin sr-clip() {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+@mixin content-on-teal() {
+	background: $teal;
+	color: white;
+	@include light-on-dark;
+
+	a {
+		color: white;
+		text-decoration: underline;
+
+		@include hover-state {
+			color: desaturate(mix(white, $teal, 85%), 10%);
+		}
+	}
+
+	input[type='text'],
+	input[type='email'],
+	input[type='url'],
+	input[type='password'],
+	input[type='search'],
+	select,
+	textarea,
+	input[type='button'],
+	input[type='submit'],
+	input[type='reset'],
+	button,
+	.wp-block-button a.wp-block-button__link,
+	a.cta-button {
+		color: white;
+		text-decoration: none; //For the cta-button
+	}
+}
+
+@mixin three-up-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 50px;
+	grid-row-gap: 20px;
+	grid-auto-rows: minmax(100px, auto);
+
+	@media screen and (max-width: $bkpt-tablet) {
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 50px;
+	}
+
+	@media screen and (max-width: $bkpt-phone) {
+		grid-template-columns: 1fr;
+		grid-column-gap: 0;
+	}
+}
+
+@mixin three-up-block {
+	min-width: ($bkpt-phone / 2) - 20px;
+
+	@media screen and (max-width: $bkpt-tablet) {
+		&:last-of-type:nth-of-type(odd) {
+			grid-column: 1 / span 2;
+		}
+	}
+
+	@media screen and (max-width: $bkpt-phone) {
+		min-width: 100%;
+		grid-column: 1;
+	}
+}

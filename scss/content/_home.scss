@@ -1,0 +1,129 @@
+body.home {
+	.site-main {
+		margin-top: 0;
+		max-width: 100%;
+	}
+}
+
+.site-image {
+	position: relative;
+	text-align: center;
+	background: $grey-mid;
+
+	.site-description {
+		position: absolute;
+		display: inline-block;
+		bottom: -45px;
+		left: calc(50% - 335px);
+		margin: 0;
+		padding: 20px 50px;
+		background: white;
+		@include font-size( 3.4 );
+
+		@media screen and (max-width: 600px) {
+			position: relative;
+			display: inline-block;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+.front-page-widget-area {
+	padding: 85px 0 50px;
+	@include content-on-teal;
+
+	.container {
+		@include three-up-container;
+	}
+	.widget {
+		@include three-up-block;
+	}
+}
+
+.site-events {
+	padding: 50px 0;
+
+	.page-title {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	.site-events-list {
+		@include three-up-container;
+
+		.post {
+			@include three-up-block;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.wp-post-image {
+		margin-bottom: 0;
+	}
+
+	.entry-header {
+		text-align: center;
+	}
+
+	.entry-title {
+		margin: 25px 0 10px;
+	}
+
+	.entry-content {
+		margin-top: 15px;
+		@include font-size( 1.6 );
+
+		max-height: 120px;
+		position: relative;
+		overflow: hidden;
+
+		p:after {
+			position: absolute;
+			bottom: 0;
+			content: '';
+			height: 24px;
+			width: 100%;
+			z-index: 10;
+			background-image: linear-gradient( to right, rgba( white, 0 ), white 40% );
+		}
+	}
+
+	.entry-link {
+		margin-top: 5px;
+		@include font-size( 1.6 );
+	}
+}
+
+.site-main-callout {
+	padding: 50px 0;
+	@include content-on-teal;
+
+	.container {
+		max-width: 800px;
+	}
+
+	.entry-content {
+		margin-top: 0;
+	}
+
+	h2 {
+		text-align: center;
+		@include font-size( 3.2 );
+	}
+}
+
+.front-page-footer-widget-area {
+	padding: 50px 0;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.widget {
+		flex: 1;
+		text-align: center;
+	}
+}

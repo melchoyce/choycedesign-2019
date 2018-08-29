@@ -1,0 +1,34 @@
+.comments-area {
+	margin: 40px 0 0;
+}
+
+.comments-title,
+.comment-reply-title {
+	margin: 40px 0;
+	@include font-size( 1.8 );
+}
+
+.comment-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	.children {
+		list-style: none;
+		margin: 0 0 0 20px;
+	}
+
+	.comment {
+		margin-bottom: 40px;
+
+		.avatar {
+			margin-right: 10px;
+		}
+
+		.comment-meta {
+			margin-bottom: 1em;
+			color: $color-meta;
+			@include font-size( 1.4 );
+		}
+	}
+}
