@@ -1,26 +1,18 @@
-$size-main-width: 1100px;
-$size-post-width: 800px;
-$size-sidebar-width: 250px;
+$size-main-width: 1000px;
+$size-post-width: 746px;
+// Gutter of 100px between
+$size-sidebar-width: 154px;
 
 $bkpt-phone: 450px;
 $bkpt-tablet: 782px;
 
-$font-text: 'Source Sans Pro';
+$font-text: 'Tisa Pro';
+$font-header: 'Poppins';
 
-$color-text: #384a48; //162B32
-$color-meta: #666;
+$slate-grey: #2D2C42;
+$dark-grey: #1E1E2C;
+$lilac: #D6CBEB;
+$rind-green: #BBE187;
+$watermelon: #FF5392;
 
-$color-1: lighten($color-text, 10);
-$color-2: lighten($color-text, 20); // Fails AA contrast against white
-$color-3: lighten($color-text, 30);
-$color-4: lighten($color-text, 40);
-$color-5: lighten($color-text, 50);
-
-$teal: #00b096;
-
-$blue-dark: #085b74;
-$blue: #008bb5;
-$blue-light: #a2cbd7;
-
-$grey-mid: #cbd0d4;
-$grey-light: #f4f5f6;
+$color-text: $lilac;

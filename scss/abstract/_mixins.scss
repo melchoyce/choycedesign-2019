@@ -49,38 +49,6 @@
 	overflow: hidden;
 }
 
-@mixin content-on-teal() {
-	background: $teal;
-	color: white;
-	@include light-on-dark;
-
-	a {
-		color: white;
-		text-decoration: underline;
-
-		@include hover-state {
-			color: desaturate(mix(white, $teal, 85%), 10%);
-		}
-	}
-
-	input[type='text'],
-	input[type='email'],
-	input[type='url'],
-	input[type='password'],
-	input[type='search'],
-	select,
-	textarea,
-	input[type='button'],
-	input[type='submit'],
-	input[type='reset'],
-	button,
-	.wp-block-button a.wp-block-button__link,
-	a.cta-button {
-		color: white;
-		text-decoration: none; //For the cta-button
-	}
-}
-
 @mixin three-up-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
