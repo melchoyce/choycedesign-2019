@@ -12,7 +12,7 @@ body {
 	@include font-size( 1.8 );
 	line-height: 1.555555;
 	color: $color-text;
-	background-color: white;
+	background: $slate-grey;
 }
 
 button,
@@ -22,19 +22,10 @@ textarea {
 	font-family: $font-text;
 }
 
-.container {
-	margin: 0 auto;
-	max-width: $size-main-width;
-
-	@media (max-width: $size-main-width + 40px) {
-		margin: 0 20px;
-	}
-}
-
 hr {
 	height: 2px;
 	border: none;
-	background-color: $color-3;
+	background-color: $dark-grey;
 }
 
 p {
@@ -49,16 +40,12 @@ img {
 
 a,
 a:visited {
-	color: $blue-dark;
+	color: $watermelon;
 	text-decoration: none;
 
 	@include hover-state {
-		color: darken($blue-dark, 5%);
 		text-decoration: underline;
 	}
-}
-a:focus {
-	outline-color: currentColor;
 }
 
 .entry-content {
@@ -153,7 +140,6 @@ a.cta-button {
 	border-radius: 0;
 	text-shadow: none;
 	box-shadow: none;
-	@include light-on-dark;
 
 	@include hover-state {
 		outline: none;
@@ -166,27 +152,6 @@ a.cta-button {
 		color: $color-text;
 		background: transparent;
 		box-shadow: inset 0 -5px 0 currentColor !important;
-	}
-}
-
-.widget .callout,
-.entry-content .callout {
-	position: relative;
-	margin-bottom: 15px;
-	padding: 20px 20px 13px;
-	// background: $red;
-	border: 1px solid red;
-	// color: white;
-	border-radius: 5px;
-
-	a {
-		color: white;
-		box-shadow: inset 0 -2px 0 #fff;
-
-		@include hover-state {
-			text-decoration: none;
-			box-shadow: inset 0 -3px 0 #fff;
-		}
 	}
 }
 

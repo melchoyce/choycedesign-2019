@@ -3,6 +3,19 @@ $size-post-width: 746px;
 // Gutter of 100px between
 $size-sidebar-width: 154px;
 
+// Responsive gutter sizing
+$gutter: var(--main-gap);
+$gutter-large: var(--large-gap);
+
+// Gap sizes
+$gap-largest: 40px;
+$gap-larger: 36px;
+$gap-large: 24px;
+$gap: 16px;
+$gap-small: 12px;
+$gap-smaller: 8px;
+$gap-smallest: 4px;
+
 $bkpt-phone: 450px;
 $bkpt-tablet: 782px;
 
@@ -11,8 +24,8 @@ $font-header: 'Poppins';
 
 $slate-grey: #2D2C42;
 $dark-grey: #1E1E2C;
-$lilac: #D6CBEB;
+$lilac: #CFCEE1;
 $rind-green: #BBE187;
-$watermelon: #FF5392;
+$watermelon: #FF6393;
 
 $color-text: $lilac;

@@ -12,9 +12,7 @@
 		margin-bottom: 10px;
 	}
 
-	.entry-image {
-		background: $grey-mid;
-	}
+	.entry-image {}
 
 	.wp-post-image {
 		display: block;
@@ -38,13 +36,11 @@
 
 			@include hover-state {
 				text-decoration: none;
-				color: $blue;
 			}
 		}
 	}
 
 	.entry-meta {
-		color: $color-meta;
 		@include font-size( 1.4 );
 
 		span + span {
@@ -155,7 +151,6 @@ body:not(.home) {
 		.site-content .widget-area {
 			margin-top: 50px;
 			padding-top: 50px;
-			border-top: 2px solid $grey-light;
 		}
 	}
 }
