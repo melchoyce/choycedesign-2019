@@ -1,26 +1,21 @@
 $size-main-width: 1000px;
-$size-post-width: 746px;
-// Gutter of 100px between
-$size-sidebar-width: 154px;
-
-// Responsive gutter sizing
-$gutter: var(--main-gap);
-$gutter-large: var(--large-gap);
+$size-post-width: 830px;
+$size-sidebar-width: 170px;
 
 // Gap sizes
-$gap-largest: 40px;
-$gap-larger: 36px;
-$gap-large: 24px;
-$gap: 16px;
-$gap-small: 12px;
-$gap-smaller: 8px;
-$gap-smallest: 4px;
+$gap-largest: 150px;
+$gap-larger: 120px;
+$gap-large: 60px;
+$gap: 50px;
+$gap-small: 40px;
+$gap-smaller: 30px;
+$gap-smallest: 20px;
 
 $bkpt-phone: 450px;
 $bkpt-tablet: 782px;
 
-$font-text: 'Tisa Pro';
-$font-header: 'Poppins';
+$font-text: 'ff-tisa-web-pro';
+$font-header: 'poppins';
 
 $slate-grey: #2D2C42;
 $dark-grey: #1E1E2C;
@@ -29,3 +24,5 @@ $rind-green: #BBE187;
 $watermelon: #FF6393;
 
 $color-text: $lilac;
+
+$svg-logo: 'http://vagrant.local/content/themes/choycedesign-2018/assets/logo.svg';

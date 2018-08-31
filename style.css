@@ -64,6 +64,9 @@ a:active,
 a:hover {
   outline: 0; }
 
+a:focus {
+  outline-color: #FF6393; }
+
 abbr[title] {
   border-bottom: 1px dotted; }
 
@@ -235,18 +238,20 @@ html {
 
 body {
   margin: 0;
-  font-family: "Tisa Pro";
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 1.555555;
+  font-family: "ff-tisa-web-pro";
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.6666666667;
   color: #CFCEE1;
-  background: #2D2C42; }
+  background: #2D2C42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 button,
 input,
 select,
 textarea {
-  font-family: "Tisa Pro"; }
+  font-family: "ff-tisa-web-pro"; }
 
 hr {
   height: 2px;
@@ -254,7 +259,7 @@ hr {
   background-color: #1E1E2C; }
 
 p {
-  margin: 0 0 15px; }
+  margin: 0 0 30px; }
 
 img {
   max-width: 100%;
@@ -271,19 +276,41 @@ a:visited {
   a:visited:focus {
     text-decoration: underline; }
 
-.entry-content h1,
-.entry-content h2 {
-  margin: 0 0 15px;
-  line-height: 1.32143; }
+.entry-title {
+  margin: 0 0 50px;
+  font-family: "poppins";
+  font-weight: 600;
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 1.2;
+  color: #BBE187; }
+  .entry-title a {
+    color: inherit; }
+    .entry-title a:hover, .entry-title a:active, .entry-title a:focus {
+      text-decoration: none; }
+
+.entry-meta {
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+h1, h2, h3, h4 {
+  font-family: "poppins";
+  font-weight: 600;
+  color: #BBE187; }
+
 .entry-content h1 {
-  font-size: 28px;
-  font-size: 2.8rem; }
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 1.2; }
 .entry-content h2 {
-  font-size: 24px;
-  font-size: 2.4rem; }
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 1.1538461538; }
 .entry-content h3 {
   font-size: 20px;
-  font-size: 2rem; }
+  font-size: 2rem;
+  line-height: 1.5;
+  text-transform: uppercase; }
 
 input[type='text'],
 input[type='email'],
@@ -409,59 +436,25 @@ a.cta-button {
   margin-left: auto;
   margin-right: auto; }
 
-.site-branding {
-  min-width: 300px;
-  flex: 0 1 300px; }
-  .site-branding .site-title {
-    display: table;
-    width: 100%;
-    height: 100%;
-    margin: 0; }
-  .site-branding a {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
-    font-weight: bold;
-    text-align: center; }
-    .site-branding a:hover, .site-branding a:active, .site-branding a:focus {
-      text-decoration: none; }
+.site-header {
+  margin: 150px auto 60px; }
 
-.site-main .hentry + .hentry {
-  margin: 40px 0;
-  padding: 60px 0 0; }
-.site-main .page-header {
-  margin-bottom: 40px; }
-.site-main .page-title {
-  margin-bottom: 10px; }
+.site-title a {
+  display: block;
+  width: 255px;
+  height: 25px;
+  text-indent: -9999em;
+  background: transparent url("http://vagrant.local/content/themes/choycedesign-2018/assets/logo.svg") no-repeat center; }
+  .site-title a:hover, .site-title a:active, .site-title a:focus {
+    text-decoration: none; }
+
+.site {
+  margin: 0 auto;
+  max-width: 1000px; }
+
 .site-main .wp-post-image {
   display: block;
   margin: 0 auto 40px; }
-.site-main .entry-header {
-  margin: 0; }
-.site-main .entry-title {
-  margin: 0 0 10px;
-  font-size: 22px;
-  font-size: 2.2rem;
-  line-height: 1.2; }
-  @media (max-width: 782px) {
-    .site-main .entry-title {
-      letter-spacing: 2px; } }
-  .site-main .entry-title a {
-    color: #CFCEE1; }
-    .site-main .entry-title a:hover, .site-main .entry-title a:active, .site-main .entry-title a:focus {
-      text-decoration: none; }
-.site-main .entry-meta {
-  font-size: 14px;
-  font-size: 1.4rem; }
-  .site-main .entry-meta span + span {
-    margin-left: 8px; }
-  .site-main .entry-meta a {
-    font-style: italic; }
-  .site-main .entry-meta .byline {
-    display: none; }
-    body.single .site-main .entry-meta .byline {
-      display: inline;
-      margin-left: 4px; }
 .site-main .entry-content,
 .site-main .entry-summary {
   margin: 30px 0 0; }
@@ -469,66 +462,22 @@ a.cta-button {
   clear: both; }
 .site-main .posts-navigation,
 .site-main .post-navigation {
-  margin: 60px 0 0;
   font-size: 14px;
   font-size: 1.4rem; }
-  .site-main .posts-navigation .nav-links,
-  .site-main .post-navigation .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .site-main .posts-navigation .nav-previous,
-  .site-main .posts-navigation .nav-next,
-  .site-main .post-navigation .nav-previous,
-  .site-main .post-navigation .nav-next {
-    flex: 1; }
-  .site-main .posts-navigation .nav-next,
-  .site-main .post-navigation .nav-next {
-    text-align: right; }
-@media (max-width: 600px) {
-  .site-main {
-    padding: 0; }
-    .site-main .paging-navigation,
-    .site-main .post-navigation {
-      margin-left: 0;
-      margin-right: 0; }
-    .site-main .nav-previous,
-    .site-main .nav-next {
-      float: none;
-      width: 100%; }
-    .site-main .nav-previous + .nav-next {
-      margin-top: 20px; } }
-
-body:not(.home) .site-content {
-  margin: 60px auto 0;
-  padding: 0 25px 50px;
-  max-width: 1000px;
-  overflow: hidden; }
-body:not(.home) .content-area {
-  float: left;
-  margin: 0 -154px 0 0;
-  width: 100%; }
-body:not(.home) .site-main {
-  margin: 0 204px 0 0; }
-body:not(.home) .site-content .widget-area {
-  float: right;
-  width: 154px; }
-body:not(.home) .footer-widget-area {
-  clear: both; }
-@media screen and (max-width: 782px) {
-  body:not(.home) .content-area,
-  body:not(.home) .site-main,
-  body:not(.home) .site-content .widget-area {
-    float: none;
-    margin: 0;
-    width: 100%; }
-  body:not(.home) .site-content .widget-area {
-    margin-top: 50px;
-    padding-top: 50px; } }
 
 body.home .site-main {
   margin-top: 0;
   max-width: 100%; }
+
+body.single-post .site-main {
+  display: grid;
+  grid-template-columns: 830px 170px; }
+  body.single-post .site-main article.post,
+  body.single-post .site-main .comments-area {
+    grid-column: 1; }
+  body.single-post .site-main .post-navigation {
+    grid-column: 2;
+    grid-row: 1; }
 
 .comments-area {
   margin: 40px 0 0; }
@@ -556,7 +505,7 @@ body.home .site-main {
       font-size: 1.4rem; }
 
 .site-footer {
-  margin: 0 0 40px;
+  margin: 0 0 50px;
   padding: 30px 0;
   font-size: 14px;
   font-size: 1.4rem;

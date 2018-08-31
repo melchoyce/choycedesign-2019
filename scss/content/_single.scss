@@ -1,0 +1,16 @@
+body.single-post {
+	.site-main {
+		display: grid;
+		grid-template-columns: $size-post-width $size-sidebar-width;
+
+		article.post,
+		.comments-area {
+			grid-column: 1;
+		}
+
+		.post-navigation {
+			grid-column: 2;
+			grid-row: 1;
+		}
+	}
+}

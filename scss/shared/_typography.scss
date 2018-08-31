@@ -9,10 +9,10 @@ html {
 body {
 	margin: 0;
 	font-family: $font-text;
-	@include font-size( 1.8 );
-	line-height: 1.555555;
+	@include font-size( 2.4, 40/24 );
 	color: $color-text;
 	background: $slate-grey;
+	@include light-on-dark;
 }
 
 button,
@@ -29,7 +29,7 @@ hr {
 }
 
 p {
-	margin: 0 0 15px;
+	margin: 0 0 $gap-smaller;
 }
 
 img {
@@ -48,20 +48,42 @@ a:visited {
 	}
 }
 
+.entry-title {
+	margin: 0 0 $gap;
+	font-family: $font-header;
+	font-weight: 600;
+	@include font-size( 3.4, 1.2 );
+	color: $rind-green;
+
+	a {
+		color: inherit;
+
+		@include hover-state {
+			text-decoration: none;
+		}
+	}
+}
+
+.entry-meta {
+	@include font-size( 1.4 );
+}
+
+h1, h2, h3, h4 {
+	font-family: $font-header;
+	font-weight: 600;
+	color: $rind-green;
+}
+
 .entry-content {
-	h1,
-	h2 {
-		margin: 0 0 15px;
-		line-height: 1.32143;
-	}
 	h1 {
-		@include font-size( 2.8 );
+		@include font-size( 3.4, 1.2 );
 	}
 	h2 {
-		@include font-size( 2.4 );
+		@include font-size( 2.6, 30/26 );
 	}
 	h3 {
-		@include font-size( 2 );
+		@include font-size( 2, 1.5 );
+		text-transform: uppercase;
 	}
 }
 

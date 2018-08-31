@@ -54,6 +54,10 @@ a:hover {
 	outline: 0;
 }
 
+a:focus {
+	outline-color: $watermelon;
+}
+
 abbr[title] {
 	border-bottom: 1px dotted;
 }
