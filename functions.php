@@ -113,43 +113,10 @@ function choycedesign_2018_content_width() {
 add_action( 'after_setup_theme', 'choycedesign_2018_content_width', 0 );
 
 /**
- * Register Google Fonts
- */
-function choycedesign_2018_fonts_url() {
-	$fonts_url = '';
-
-	/*
-	 *Translators: If there are characters in your language that are not
-	 * supported by Noto Serif, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'choycedesign' );
-
-	if ( 'off' !== $notoserif ) {
-		$font_families = array();
-		$font_families[] = 'Noto Serif:400,400italic,700,700italic';
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-
-}
-
-/**
  * Enqueue scripts and styles.
  */
 function choycedesign_2018_scripts() {
 	wp_enqueue_style( 'gutenbergbase-style', get_stylesheet_uri() );
-
-	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/css/blocks.css' );
-
-	wp_enqueue_style( 'choycedesign-2018-fonts', choycedesign_2018_fonts_url() );
 
 	wp_enqueue_script( 'choycedesign-2018-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
