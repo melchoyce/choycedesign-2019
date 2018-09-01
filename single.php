@@ -20,11 +20,6 @@ get_header(); ?>
 		if ( comments_open() || get_comments_number() ) :
 			comments_template();
 		endif;
-
-		the_post_navigation( array(
-			'prev_text' => '← %title',
-			'next_text' => '%title →',
-		) );
 	endwhile; // End of the loop.
 	?>
 

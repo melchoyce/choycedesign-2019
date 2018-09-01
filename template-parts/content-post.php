@@ -20,13 +20,7 @@
 				the_post_thumbnail();
 			endif;
 		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php choycedesign_2018_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
+		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -54,4 +48,12 @@
 	<footer class="entry-footer">
 		<?php choycedesign_2018_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
+	<?php
+		the_post_navigation( array(
+			'prev_text' => __( 'Previous Post', 'choycedesign' ),
+			'next_text' => __( 'Next Post', 'choycedesign' ),
+		) );
+	?>
+
 </article><!-- #post-<?php the_ID(); ?> -->

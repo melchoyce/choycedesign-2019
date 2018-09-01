@@ -30,3 +30,17 @@ function choycedesign_2018_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'choycedesign_2018_pingback_header' );
+
+function choycedesign_2018_post_navigation( $template, $class ) {
+	if ( 'post-navigation' !== $class ) {
+		return $template;
+	}
+	$all_posts = sprintf(
+		'<div class="nav-all"><a href="%s" rel="prev">%s</a></div>',
+		home_url( '/archive' ),
+		__( 'All Posts', 'choycedesign' )
+	);
+
+	return str_replace( '</h2>', '</h2>' . $all_posts, $template );
+}
+add_filter( 'navigation_markup_template', 'choycedesign_2018_post_navigation', 10, 2 );

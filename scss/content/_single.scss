@@ -1,16 +1,21 @@
 body.single-post {
-	.site-main {
+	article.post {
 		display: grid;
 		grid-template-columns: $size-post-width $size-sidebar-width;
 
-		article.post,
-		.comments-area {
+		.entry-header {
+			grid-column: 1/span 2;
+		}
+
+		.entry-content,
+		.entry-footer {
 			grid-column: 1;
+			margin-right: $gap * 2;
 		}
 
 		.post-navigation {
 			grid-column: 2;
-			grid-row: 1;
+			grid-row: 2;
 		}
 	}
 }
