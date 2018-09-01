@@ -3,4 +3,44 @@ body.home {
 		margin-top: 0;
 		max-width: 100%;
 	}
+
+	h2 {
+		max-width: $size-post-width;
+	}
+
+	.wp-block-columns {
+		margin-bottom: $gap-larger;
+	}
+
+	.wp-block-column {
+		ul {
+			list-style: none;
+		}
+
+		ul:first-child {
+			margin-top: 0;
+		}
+
+		li + li {
+			margin-top: $gap-smallest;
+		}
+
+		&:nth-of-type(2n+1) {
+			min-width: $size-post-width - 2 * $gap;
+			margin-right: 2 * $gap;
+		}
+		&:nth-of-type(2n) {
+			min-width: $size-sidebar-width;
+		}
+	}
+
+	.home-talks,
+	.home-posts {
+		.wp-block-column:nth-of-type(2n) {
+			min-width: 750px;
+		}
+		.wp-block-column:nth-of-type(2n+1) {
+			min-width: 250px;
+		}
+	}
 }
