@@ -89,6 +89,13 @@ h1, h2, h3, h4 {
 	}
 }
 
+blockquote {
+	@include font-size( 3.2, 54/32 );
+	font-weight: 600;
+	font-style: italic;
+	color: $rind-green;
+}
+
 input[type='text'],
 input[type='email'],
 input[type='url'],
@@ -177,38 +184,4 @@ a.cta-button {
 		background: transparent;
 		box-shadow: inset 0 -5px 0 currentColor !important;
 	}
-}
-
-.wp-caption {
-	border: none;
-	margin-bottom: 1em;
-
-	img {
-		margin: 0;
-		max-width: 100%;
-	}
-
-	.wp-caption-text {
-		margin: 10px 0 8px;
-		text-align: left;
-	}
-}
-
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
-
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
-
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
