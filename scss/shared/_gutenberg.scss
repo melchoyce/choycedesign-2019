@@ -1,9 +1,20 @@
 
 .wp-block-separator {
 	clear: both;
+	margin-top: $gap-smaller;
+	margin-bottom: $gap-smaller;
 	height: 2px;
 	border: none;
 	background-color: $dark-grey;
+
+	&.is-style-dots {
+		background-color: transparent;
+
+		&:before {
+			font-weight: bold;
+			color: $lilac;
+		}
+	}
 }
 
 .wp-block-quote {
