@@ -15,10 +15,6 @@
 		margin: 0;
 	}
 
-	.wp-block-separator {
-		clear: both;
-	}
-
 	.posts-navigation,
 	.post-navigation {
 		@include font-size( 2 );

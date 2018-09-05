@@ -89,13 +89,6 @@ h1, h2, h3, h4 {
 	}
 }
 
-blockquote {
-	@include font-size( 3.2, 54/32 );
-	font-weight: 600;
-	font-style: italic;
-	color: $rind-green;
-}
-
 input[type='text'],
 input[type='email'],
 input[type='url'],
@@ -154,34 +147,6 @@ label {
 input[type='button'],
 input[type='submit'],
 input[type='reset'],
-button,
-.wp-block-button a.wp-block-button__link,
-a.cta-button {
-	display: inline-block;
-	margin: 0;
-	padding: 14px 30px;
-	line-height: 1;
-	font-weight: bold;
-	@include font-size( 1.6 );
-	text-transform: uppercase;
-	text-decoration: none;
-	color: $color-text;
-	background: transparent;
-	border: 2px solid currentColor;
-	border-radius: 0;
-	text-shadow: none;
-	box-shadow: none;
-
-	@include hover-state {
-		outline: none;
-		box-shadow: inset 0 -5px 0 currentColor;
-	}
-}
-
-.wp-block-button .wp-block-button__link {
-	@include hover-state {
-		color: $color-text;
-		background: transparent;
-		box-shadow: inset 0 -5px 0 currentColor !important;
-	}
+button {
+	@include button;
 }

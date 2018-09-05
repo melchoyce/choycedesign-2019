@@ -81,3 +81,22 @@
 		grid-column: 1;
 	}
 }
+
+// This is a mixin so it can be shared between GB & theme.
+@mixin button {
+	display: inline-block;
+	margin: 0;
+	padding: $gap-smaller/2 $gap-small;
+	@include font-size( 1.6, 1 );
+	font-family: $font-header;
+	color: $color-text;
+	background: transparent;
+	border: 2px solid currentColor;
+	border-radius: 0;
+	text-shadow: none;
+	box-shadow: none;
+
+	@include hover-state {
+		outline: none;
+	}
+}

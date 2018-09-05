@@ -1,0 +1,85 @@
+
+.wp-block-separator {
+	clear: both;
+	height: 2px;
+	border: none;
+	background-color: $dark-grey;
+}
+
+.wp-block-quote {
+	@include font-size( 3.2, 54/32 );
+	font-weight: 600;
+	font-style: italic;
+	color: $rind-green;
+	padding-left: $gap-large !important;
+	background-image: url( "#{$svg-quote}" );
+	background-repeat: no-repeat;
+	background-position: top left;
+	border: none !important;
+
+	p {
+		font-size: inherit;
+		line-height: inherit;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	cite {
+		display: inline-block;
+		margin-top: 0;
+		color: $lilac;
+		@include font-size( 2.4, 1.2 );
+		font-weight: normal;
+
+		&:before {
+			content: '—';
+			margin-right: 0.5em;
+		}
+	}
+
+	&.is-large,
+	&.is-style-large {
+		margin-left: -$gap-large;
+		padding-left: $gap-large;
+		padding-right: 0;
+
+		p {
+			font-size: inherit;
+			line-height: inherit;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		cite {
+			@include font-size( 2.4, 1.2 );
+		}
+	}
+}
+
+.wp-block-pullquote {
+	margin: $gap-small;
+	padding: $gap 0;
+	border-color: $dark-grey;
+
+	> p {
+		@include font-size( 3.2, 54/32 );
+		font-weight: 600;
+		font-style: italic;
+		color: $rind-green;
+	}
+}
+
+.wp-block-button a.wp-block-button__link {
+	@include button;
+}
+
+.wp-block-button .wp-block-button__link {
+	@include hover-state {
+		color: $color-text;
+		background: transparent;
+	}
+}
