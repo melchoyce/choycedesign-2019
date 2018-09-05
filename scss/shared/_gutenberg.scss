@@ -83,3 +83,36 @@
 		background: transparent;
 	}
 }
+
+.alignwide {
+	margin-left: 0;
+	margin-right: -100px - $size-sidebar-width;
+	max-width: 100vw;
+}
+
+.alignfull {
+	margin-left: calc( -50vw + #{ $size-main-width/2 } );
+	margin-right: 0;
+	max-width: 100vw;
+	width: 100vw;
+
+	@media (max-width: $size-main-width) {
+		margin-left: 0;
+	}
+}
+
+.wp-block-cover-image {
+	&.alignwide {
+		width: calc( 100% + #{ 100px + $size-sidebar-width } );
+	}
+
+	&.has-background-dim::before {
+		background-color: rgba($slate-grey, 0.5);
+	}
+
+	@for $i from 1 through 10 {
+		&.has-background-dim.has-background-dim-#{ $i * 10 }::before {
+			background-color: rgba($slate-grey, $i * 0.1);
+		}
+	}
+}
