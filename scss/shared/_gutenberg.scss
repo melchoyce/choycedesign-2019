@@ -17,6 +17,7 @@
 }
 
 .wp-block-quote {
+	margin: 0 0 $gap-smaller;
 	@include font-size( 3.2, 54/32 );
 	font-weight: 600;
 	font-style: italic;

@@ -31,6 +31,9 @@ function choycedesign_2018_pingback_header() {
 }
 add_action( 'wp_head', 'choycedesign_2018_pingback_header' );
 
+/**
+ * Add a link to "all posts" in the next/prev post navigation
+ */
 function choycedesign_2018_post_navigation( $template, $class ) {
 	if ( 'post-navigation' !== $class ) {
 		return $template;

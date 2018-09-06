@@ -1,11 +1,11 @@
 .comments-area {
-	margin: 40px 0 0;
+	margin: $gap-larger 0 0;
 }
 
 .comments-title,
 .comment-reply-title {
-	margin: 40px 0;
-	@include font-size( 1.8 );
+	@include font-size( 2.8, 50/28 );
+	margin-bottom: $gap-large;
 }
 
 .comment-list {
@@ -15,19 +15,56 @@
 
 	.children {
 		list-style: none;
-		margin: 0 0 0 20px;
+		margin: 0 0 0 $gap-smaller;
 	}
 
 	.comment {
-		margin-bottom: 40px;
+		margin-bottom: $gap;
+	}
+
+	.comment-meta {
+		display: grid;
+		grid-template-columns: 64px 1fr;
+		margin-bottom: $gap-smaller;
 
 		.avatar {
-			margin-right: 10px;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 3;
+			height: 64px;
+			width: 64px;
 		}
 
-		.comment-meta {
-			margin-bottom: 1em;
-			@include font-size( 1.4 );
+		.comment-posted {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			margin-left: $gap-smallest;
+
+			/* JUNE 4, 2018 AT 7:15: */
+			font-family: $font-header;
+			@include font-size( 1.4, 1.2 );
+			text-transform: uppercase;
+			letter-spacing: 2px;
+
+			a {
+				color: $color-text;
+			}
 		}
+
+		.comment-author {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			margin-left: $gap-smallest;
+		}
+	}
+
+	.comment-content,
+	.comment-reply {
+		margin-left: 64px + $gap-smallest;
 	}
 }

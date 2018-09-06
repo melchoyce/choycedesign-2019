@@ -32,6 +32,22 @@ p {
 	margin: 0 0 $gap-smaller;
 }
 
+blockquote, q {
+	font-weight: 600;
+	font-style: italic;
+	color: $rind-green;
+}
+
+blockquote {
+	margin: 0 $gap-small $gap-smaller;
+	margin-left: -$gap-small;
+	padding-left: $gap-small;
+	background-image: url( "#{$svg-quote}" );
+	background-repeat: no-repeat;
+	background-position: 0 10px;
+	background-size: 25px 18px;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
