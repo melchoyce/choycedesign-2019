@@ -3,14 +3,15 @@
 }
 
 .comments-title,
+.pings-title,
 .comment-reply-title {
 	@include font-size( 2.8, 50/28 );
-	margin-bottom: $gap-large;
+	margin-bottom: $gap-small;
 }
 
 .comment-list {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 $gap-larger;
 	padding: 0;
 
 	.children {
@@ -19,7 +20,7 @@
 	}
 
 	.comment {
-		margin-bottom: $gap;
+		margin: $gap 0;
 	}
 
 	.comment-meta {
@@ -42,8 +43,6 @@
 			grid-row-start: 1;
 			grid-row-end: 2;
 			margin-left: $gap-smallest;
-
-			/* JUNE 4, 2018 AT 7:15: */
 			font-family: $font-header;
 			@include font-size( 1.4, 1.2 );
 			text-transform: uppercase;
@@ -66,5 +65,20 @@
 	.comment-content,
 	.comment-reply {
 		margin-left: 64px + $gap-smallest;
+	}
+
+	.comment-reply {
+		font-family: $font-header;
+		@include font-size( 2 );
+	}
+}
+
+.pings-list {
+	list-style: none;
+	margin: 0 0 $gap-larger;
+	padding: 0;
+
+	li {
+		margin-bottom: $gap-smallest;
 	}
 }

@@ -1,5 +1,5 @@
 .site-footer {
-	margin: 0 0 $gap;
+	margin: $gap-larger 0 $gap;
 	padding: $gap-smaller 0;
 	@include font-size( 1.4 );
 	text-align: center;
