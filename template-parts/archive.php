@@ -30,13 +30,20 @@ ksort( $all_posts );
 
 foreach( $all_posts_by_year as $year => $posts ) {
 ?>
-	<section>
-		<h2><?php echo $year; ?></h2>
+	<section class="archive">
+		<h2 class="archive-year"><?php echo $year; ?></h2>
 
-		<ul>
-		<?php foreach( $posts as $post ) : ?>
-			<li><?php echo $post->post_title; ?></li>
-		<?php endforeach; ?>
+		<ul class="archive-list">
+		<?php foreach( $posts as $post ) {
+			global $post;
+			setup_postdata( $post );
+			the_title(
+				sprintf( '<li class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+				'</a></li>'
+			);
+		} ?>
 		</ul>
+	</section>
 <?php
+wp_reset_postdata();
 }
