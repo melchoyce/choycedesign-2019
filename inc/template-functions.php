@@ -65,17 +65,10 @@ function choycedesign_2018_get_posts_by_year() {
  * Get a list of all posts, sorted by year (this function bypasses cache).
  */
 function _choycedesign_2018_generate_posts() {
-	// Get posts dated after 3 years ago
-	$year = date( 'Y', time() - YEAR_IN_SECONDS * 3 );
 	$all_posts = get_posts( array(
 		'posts_per_page' => -1,
 		'post_type' => 'post',
 		'suppress_filters' => true,
-		'date_query' => array(
-			'after' => array(
-				'year' => $year,
-			),
-		),
 	) );
 
 	$all_posts_by_year = array();
