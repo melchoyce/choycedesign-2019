@@ -1,15 +1,15 @@
-.archive {
+.full-archive {
 	margin: 2*$gap 0;
 	display: grid;
 	grid-template-columns: $size-sidebar-width 1fr;
 }
 
-.archive-year {
+.full-archive-year {
 	margin: 0;
 	@include font-size( 2.6 );
 }
 
-.archive-list {
+.full-archive-list {
 	margin: 0;
 	list-style: none;
 

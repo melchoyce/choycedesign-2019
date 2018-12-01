@@ -9,10 +9,10 @@ $all_posts_by_year = choycedesign_2018_get_posts_by_year();
 
 foreach( $all_posts_by_year as $year => $links ) {
 ?>
-	<section class="archive">
-		<h2 class="archive-year"><?php echo $year; ?></h2>
+	<section class="full-archive">
+		<h2 class="full-archive-year"><?php echo $year; ?></h2>
 
-		<ul class="archive-list">
+		<ul class="full-archive-list">
 		<?php foreach( $links as $link ) {
 			printf( '<li class="entry-title">%s</li>', $link );
 		} ?>
