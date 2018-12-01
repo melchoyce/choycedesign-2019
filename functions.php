@@ -77,24 +77,29 @@ function choycedesign_2018_setup() {
 	// Add support for custom color scheme.
 	add_theme_support( 'editor-color-palette', array(
 		array(
-			'name'  => __( 'Strong Blue', 'choycedesign' ),
-			'slug'  => 'strong-blue',
-			'color' => '#0073aa',
+			'name'  => __( 'Dark Grey', 'choycedesign' ),
+			'slug'  => 'dark-grey',
+			'color' => '#1E1E2C',
 		),
 		array(
-			'name'  => __( 'Lighter Blue', 'choycedesign' ),
-			'slug'  => 'lighter-blue',
-			'color' => '#229fd8',
+			'name'  => __( 'Slate Grey', 'choycedesign' ),
+			'slug'  => 'slate-grey',
+			'color' => '#2D2C42',
 		),
 		array(
-			'name'  => __( 'Very Light Gray', 'choycedesign' ),
-			'slug'  => 'very-light-gray',
-			'color' => '#eee',
+			'name'  => __( 'Lilac', 'choycedesign' ),
+			'slug'  => 'lilac',
+			'color' => '#CFCEE1',
 		),
 		array(
-			'name'  => __( 'Very Dark Gray', 'choycedesign' ),
-			'slug'  => 'very-dark-gray',
-			'color' => '#444',
+			'name'  => __( 'Rind Green', 'choycedesign' ),
+			'slug'  => 'rind-green',
+			'color' => '#BBE187',
+		),
+		array(
+			'name'  => __( 'Watermelon', 'choycedesign' ),
+			'slug'  => 'watermelon',
+			'color' => '#FF6393',
 		),
 	) );
 }

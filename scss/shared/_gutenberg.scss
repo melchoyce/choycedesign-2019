@@ -144,3 +144,27 @@
 		background: transparent;
 	}
 }
+
+$colors: (
+	slate-grey: $slate-grey,
+	dark-grey: $dark-grey,
+	lilac: $lilac,
+	rind-green: $rind-green,
+	watermelon: $watermelon,
+);
+
+@each $name, $value in $colors {
+	.has-#{$name}-background-color {
+		background-color: $value;
+	}
+
+	.has-#{$name}-color {
+		color: $value;
+
+		.wp-block-quote &,
+		.wp-block-pullquote & {
+			$color-svg-quote: str-replace( $svg-quote, '#BBE187', $value );
+			background-image: url( "#{$color-svg-quote}" );
+		}
+	}
+}
