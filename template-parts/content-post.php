@@ -17,7 +17,11 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			if ( has_post_thumbnail() ) :
-				the_post_thumbnail();
+				the_post_thumbnail( 'post-thumbnail', array(
+					'alt' => the_title_attribute( array(
+						'echo' => false,
+					) ),
+				) );
 			endif;
 		endif;
 		?>
