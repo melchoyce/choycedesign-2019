@@ -1,3 +1,24 @@
+body.archive {
+	.site-main {
+		display: grid;
+		grid-template-columns: $size-post-width $size-sidebar-width;
+
+		.page-header {
+			grid-column: 1/span 2;
+		}
+
+		.page-content {
+			grid-column: 1;
+			margin-right: $gap * 2;
+		}
+
+		.posts-navigation {
+			grid-column: 2;
+			grid-row: 2;
+		}
+	}
+}
+
 .full-archive {
 	margin: 2*$gap 0;
 	display: grid;
