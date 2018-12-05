@@ -25,7 +25,7 @@ function choycedesign_2018_entry_footer() {
 	if ( isset( $modified_time_string ) ) {
 		$posted_on = sprintf(
 			/* translators: %1$s: post date, %2$s modified date. */
-			esc_html_x( 'Posted on %1$s, last updated %2$s', 'post date', 'choycedesign' ),
+			esc_html_x( 'Posted on %1$s (last updated %2$s)', 'post date', 'choycedesign' ),
 			$time_string,
 			$modified_time_string
 		);
