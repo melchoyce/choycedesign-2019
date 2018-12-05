@@ -1,7 +1,7 @@
 body.single-post {
 	article.post {
 		display: grid;
-		grid-template-columns: $size-post-width $size-sidebar-width;
+		grid-template-columns: calc( 100% - #{$size-sidebar-width} ) $size-sidebar-width;
 
 		.entry-header {
 			grid-column: 1/span 2;
@@ -16,6 +16,36 @@ body.single-post {
 		.post-navigation {
 			grid-column: 2;
 			grid-row: 2;
+		}
+
+		@media (max-width: $bkpt-tablet) {
+			grid-template-columns: calc( 100% - 140px ) 140px;
+
+			.entry-content,
+			.entry-footer {
+				margin-right: $gap;
+			}
+		}
+
+		@media (max-width: 600px) {
+			grid-template-columns: 1fr;
+
+			.entry-header,
+			.entry-content,
+			.entry-footer,
+			.post-navigation {
+				grid-column: 1;
+				grid-row: auto;
+			}
+
+			.entry-content,
+			.entry-footer {
+				margin-right: 0;
+			}
+
+			.post-navigation {
+				margin-top: $gap-small;
+			}
 		}
 	}
 }

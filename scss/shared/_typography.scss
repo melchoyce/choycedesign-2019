@@ -46,6 +46,10 @@ blockquote {
 	background-repeat: no-repeat;
 	background-position: 0 10px;
 	background-size: 25px 18px;
+
+	@media (max-width: $bkpt-tablet) {
+		margin-left: 0;
+	}
 }
 
 img {
@@ -68,6 +72,10 @@ a:visited {
 ul, ol {
 	padding-left: 0;
 	margin-bottom: $gap-smaller;
+
+	@media (max-width: $bkpt-content) {
+		padding-left: 1em;
+	}
 
 	li {
 		margin-bottom: $gap-smaller/2;

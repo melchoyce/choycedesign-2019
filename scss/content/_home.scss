@@ -43,4 +43,27 @@ body.home {
 			min-width: 250px;
 		}
 	}
+
+	@media (max-width: $bkpt-content) {
+		h2 {
+			max-width: 100%;
+		}
+
+		.wp-block-columns {
+			display: block;
+		}
+
+		.home-talks .wp-block-column,
+		.home-posts .wp-block-column,
+		.wp-block-column {
+			&:nth-of-type(2n+1) {
+				min-width: 100%;
+				margin-right: 0;
+			}
+			&:nth-of-type(2n) {
+				min-width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
 }

@@ -49,39 +49,6 @@
 	overflow: hidden;
 }
 
-@mixin three-up-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 50px;
-	grid-row-gap: 20px;
-	grid-auto-rows: minmax(100px, auto);
-
-	@media screen and (max-width: $bkpt-tablet) {
-		grid-template-columns: 1fr 1fr;
-		grid-column-gap: 50px;
-	}
-
-	@media screen and (max-width: $bkpt-phone) {
-		grid-template-columns: 1fr;
-		grid-column-gap: 0;
-	}
-}
-
-@mixin three-up-block {
-	min-width: ($bkpt-phone / 2) - 20px;
-
-	@media screen and (max-width: $bkpt-tablet) {
-		&:last-of-type:nth-of-type(odd) {
-			grid-column: 1 / span 2;
-		}
-	}
-
-	@media screen and (max-width: $bkpt-phone) {
-		min-width: 100%;
-		grid-column: 1;
-	}
-}
-
 // This is a mixin so it can be shared between GB & theme.
 @mixin button {
 	display: inline-block;
