@@ -19,6 +19,12 @@
 		margin: 0;
 	}
 
+	.posted-on {
+		font-family: $font-header;
+		font-weight: 600;
+		@include font-size( 1.4 );
+	}
+
 	.posts-navigation,
 	.post-navigation {
 		@include font-size( 2 );
