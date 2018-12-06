@@ -50,7 +50,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php choycedesign_2018_entry_footer(); ?>
+		<?php choycedesign_2019_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php

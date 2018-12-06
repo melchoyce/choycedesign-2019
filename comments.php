@@ -54,7 +54,7 @@ if ( post_password_required() ) {
 			<ol class="comment-list">
 				<?php
 					wp_list_comments( array(
-						'callback'    => 'choycedesign_2018_comments',
+						'callback'    => 'choycedesign_2019_comments',
 						'avatar_size' => 128,
 						'style'       => 'ol',
 						'type'        => 'comment',
@@ -71,7 +71,7 @@ if ( post_password_required() ) {
 			<ul class="pings-list">
 				<?php
 					wp_list_comments( array(
-						'callback'    => 'choycedesign_2018_pings',
+						'callback'    => 'choycedesign_2019_pings',
 						'style'       => 'ul',
 						'type'        => 'pings',
 					) );

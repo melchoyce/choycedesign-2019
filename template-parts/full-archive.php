@@ -5,7 +5,7 @@
  * @package Choyce Design
  */
 
-$all_posts_by_year = choycedesign_2018_get_posts_by_year();
+$all_posts_by_year = choycedesign_2019_get_posts_by_year();
 
 foreach( $all_posts_by_year as $year => $links ) {
 ?>

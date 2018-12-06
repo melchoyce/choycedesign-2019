@@ -14,14 +14,14 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function choycedesign_2018_jetpack_setup() {
+function choycedesign_2019_jetpack_setup() {
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details' => array(
-			'stylesheet' => 'choycedesign-2018-style',
+			'stylesheet' => 'choycedesign-2019-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -30,4 +30,4 @@ function choycedesign_2018_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'choycedesign_2018_jetpack_setup' );
+add_action( 'after_setup_theme', 'choycedesign_2019_jetpack_setup' );

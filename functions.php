@@ -14,7 +14,7 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function choycedesign_2018_setup() {
+function choycedesign_2019_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -103,7 +103,7 @@ function choycedesign_2018_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'choycedesign_2018_setup' );
+add_action( 'after_setup_theme', 'choycedesign_2019_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -112,24 +112,24 @@ add_action( 'after_setup_theme', 'choycedesign_2018_setup' );
  *
  * @global int $content_width
  */
-function choycedesign_2018_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'choycedesign_2018_content_width', 640 );
+function choycedesign_2019_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'choycedesign_2019_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'choycedesign_2018_content_width', 0 );
+add_action( 'after_setup_theme', 'choycedesign_2019_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
  */
-function choycedesign_2018_scripts() {
+function choycedesign_2019_scripts() {
 	wp_enqueue_style( 'gutenbergbase-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'choycedesign-2018-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'choycedesign-2019-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'choycedesign_2018_scripts' );
+add_action( 'wp_enqueue_scripts', 'choycedesign_2019_scripts' );
 
 /**
  * Custom template tags for this theme.

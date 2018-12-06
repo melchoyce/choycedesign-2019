@@ -8,7 +8,7 @@
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function choycedesign_2018_entry_footer() {
+function choycedesign_2019_entry_footer() {
 	$time_string = sprintf(
 		'<time class="entry-date published updated" datetime="%1$s">%2$s</time>',
 		esc_attr( get_the_date( 'c' ) ),
@@ -43,7 +43,7 @@ function choycedesign_2018_entry_footer() {
 /**
  * Format the comments.
  */
-function choycedesign_2018_comments( $comment, $args, $depth ) {
+function choycedesign_2019_comments( $comment, $args, $depth ) {
 	?>
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( $comment->has_children ? 'parent' : '', $comment ); ?>>
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
@@ -93,7 +93,7 @@ function choycedesign_2018_comments( $comment, $args, $depth ) {
 /**
  * Format the pings.
  */
-function choycedesign_2018_pings( $comment, $args, $depth ) {
+function choycedesign_2019_pings( $comment, $args, $depth ) {
 	?>
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( '', $comment ); ?>>
 		<?php comment_author_link( $comment ); ?>
