@@ -6,6 +6,10 @@
 	border: none;
 	background-color: $dark-grey;
 
+	&:not(.is-style-wide):not(.is-style-dots) {
+		max-width: 100%;
+	}
+
 	&.is-style-dots {
 		background-color: transparent;
 
