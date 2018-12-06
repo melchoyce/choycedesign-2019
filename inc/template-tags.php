@@ -14,28 +14,12 @@ function choycedesign_2019_entry_footer() {
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() )
 	);
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$modified_time_string = sprintf(
-			'<time class="updated" datetime="%1$s">%2$s</time>',
-			esc_attr( get_the_modified_date( 'c' ) ),
-			esc_html( get_the_modified_date() )
-		);
-	}
 
-	if ( isset( $modified_time_string ) ) {
-		$posted_on = sprintf(
-			/* translators: %1$s: post date, %2$s modified date. */
-			esc_html_x( 'Posted on %1$s (last updated %2$s)', 'post date', 'choycedesign' ),
-			$time_string,
-			$modified_time_string
-		);
-	} else {
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'choycedesign' ),
-			$time_string
-		);
-	}
+	$posted_on = sprintf(
+		/* translators: %s: post date. */
+		esc_html_x( 'Posted on %s', 'post date', 'choycedesign' ),
+		$time_string
+	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 }
