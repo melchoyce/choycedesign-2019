@@ -189,3 +189,16 @@ input[type='reset'],
 button {
 	@include button;
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba( $lilac, 0.9 );
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba( $lilac, 0.9 );
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba( $lilac, 0.9 );
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba( $lilac, 0.9 );
+}

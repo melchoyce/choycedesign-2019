@@ -131,6 +131,14 @@
 	margin-right: 0;
 }
 
+.wp-block-image,
+.wp-block-audio,
+.wp-block-video {
+	figcaption {
+		color: $lilac;
+	}
+}
+
 .wp-block-button a.wp-block-button__link {
 	@include button;
 }
