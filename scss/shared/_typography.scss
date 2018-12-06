@@ -73,6 +73,11 @@ ul, ol {
 	padding-left: 0;
 	margin-bottom: $gap-smaller;
 
+	ul, ol {
+		margin-top: $gap-smaller/2;
+		padding-left: 1em;
+	}
+
 	@media (max-width: $bkpt-content) {
 		padding-left: 1em;
 	}
