@@ -92,7 +92,7 @@ ul, ol {
 	max-width: $size-post-width;
 	font-family: $font-header;
 	font-weight: 600;
-	@include font-size( 3.4, 1.2 );
+	@include font-size( 3.4 );
 	color: $rind-green;
 
 	a {
