@@ -9,12 +9,16 @@
   },
   "author": "Mel Choyce & Kelly Dwan",
   "license": "ISC",
+  "browserslist": [
+    "last 2 versions"
+  ],
   "devDependencies": {
-    "autoprefixer": "^9.3.1",
-    "gulp": "^4.0.0",
+    "autoprefixer": "^9.6.1",
+    "gulp": "^4.0.2",
     "gulp-livereload": "^4.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "postcss-inline-svg": "^4.1.0"
   }
 }

@@ -27,7 +27,7 @@
 	font-style: italic;
 	color: $rind-green;
 	padding-left: $gap-large !important;
-	background-image: url( "#{$svg-quote}" );
+	background-image: svg-load('./assets/quote.svg', 'fill=#BBE187');
 	background-repeat: no-repeat;
 	background-position: 0 $gap-smaller/2;
 	border: none !important;
@@ -172,8 +172,7 @@ $colors: (
 
 		.wp-block-quote &,
 		.wp-block-pullquote & {
-			$color-svg-quote: str-replace( $svg-quote, '#BBE187', $value );
-			background-image: url( "#{$color-svg-quote}" );
+			background-image: svg-load('./assets/quote.svg', 'fill=#{$value}');
 		}
 	}
 }

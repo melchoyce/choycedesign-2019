@@ -10,7 +10,8 @@
 		width: 255px;
 		height: 25px;
 		text-indent: -9999em;
-		background: transparent url( "#{$svg-logo}" ) no-repeat center;
+		background: transparent no-repeat center;
+		background-image: svg-load('./assets/logo.svg');
 
 		@include hover-state {
 			text-decoration: none;
